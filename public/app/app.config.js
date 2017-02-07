@@ -8,6 +8,7 @@
         $urlRouterProvider.when("/", "home");
 
         $urlRouterProvider.otherwise("/home");
+        
 
         $stateProvider
             .state('home', {
