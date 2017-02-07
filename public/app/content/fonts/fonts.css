@@ -1,0 +1,51 @@
+﻿@font-face {
+    font-family: FjallaOne-Regular;
+    src: url(Fjalla_One/FjallaOne-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Jura-Regular;
+    src: url(Jura/Jura-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: Jura-Light;
+    src: url(Jura/Jura-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: Jura-Medium;
+    src: url(Jura/Jura-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: Jura-DemiBold;
+    src: url(Jura/Jura-DemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Nunito-Light;
+    src: url(Nunito/Nunito-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: Nunito-Bold;
+    src: url(Nunito/Nunito-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: Nunito-Regular;
+    src: url(Nunito/Nunito-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(Roboto/Roboto-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(Roboto/Roboto-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: Roboto-Light;
+    src: url(Roboto/Roboto-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(Roboto/Roboto-Bold.ttf) format('truetype');
+}

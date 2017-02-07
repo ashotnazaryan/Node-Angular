@@ -1,0 +1,37 @@
+<div class="home">
+    <h1>This is Home Page</h1>
+    <div class="main">
+        <div class="block">
+            <!--<label for="country" class="label label-main">Choose a country where do you want to travel</label>-->
+            <div class="dropdown" id="country">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    {{selectedCountry.name || '-Choose country-'}}<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li ng-repeat="item in countries" ng-click="selectCountry(item)">
+                        <a>{{item.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="block" ng-if="selectedCountry">
+            <!--<label for="city" class="label label-main">Choose a city</label>-->
+            <div class="dropdown" id="city">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    {{selectedCity || '-Choose city-'}}<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li ng-repeat="subitem in cities" ng-click="selectCity(subitem)">
+                        <a>{{subitem.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="block" ng-if="selectedCountry && selectedCity">
+            <button class="btn btn-primary" ng-click="count()">Count</button>
+            <div class="count">{{ticketcost | currency}}</div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,50 @@
+
+<html ng-app="app">
+    <head>
+        <link rel="stylesheet" href="app/content/bootstrap.css" />
+        <link rel="stylesheet" href="app/content/tether.css" />
+        <link rel="stylesheet" href="app/content/fonts/fonts.css" />
+        <link rel="stylesheet" href="app/content/styles/app.css" />
+
+        <script src="app/scripts/jquery-3.1.0.js"></script>
+        <script src="app/scripts/tether.js"></script>
+        <script src="app/scripts/bootstrap.js"></script>
+
+
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaNWoYbT3Tp0UpGoll74zqQNfoZ6u5K5g&callback=initMap" async defer></script>
+        <script>
+            function initMap() {
+                // Create a map object and specify the DOM element for display.
+                var coord = {lat: 49.3437842, lng: -123.140488554};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: coord,
+                    scrollwheel: false,
+                    mapTypeId: 'satellite',
+                    zoom: 19
+                });
+                var marker = new google.maps.Marker({
+                    position: coord,
+                    map: map
+                });
+            }
+
+        </script>
+
+        <script src="app/scripts/angular.js"></script>
+        <script src="app/scripts/angular-ui-router.js"></script>
+        <script src="app/scripts/ngStorage.js"></script>
+
+        <script src="app/services/services.module.js"></script>
+        <script src="app/services/http.service.js"></script>
+
+        <script src="app/app.js"></script>
+        <script src="app/app.config.js"></script>
+        <script src="app/controllers/home.controller.js"></script>
+    </head>
+    <body>
+        <div ui-view="home" id="home"></div>
+        <div id="map"></div>
+    </body>
+</html>
+
