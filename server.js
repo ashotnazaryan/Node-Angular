@@ -3,11 +3,12 @@
  */
 
 var express  = require('express');
-var app      = express();                               // create our public w/ express
+var app = express();                               // create our public w/ express
 var mongoose = require('mongoose');                     // mongoose for mongodb
 var morgan = require('morgan');             // log requests to the console (express4)
 var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
+//var things = require('./things.js');
 
 mongoose.connect('mongodb://localhost:27017/test');     // connect to mongoDB database on modulus.io
 
@@ -50,9 +51,12 @@ app.post('/api/cities', function(req, res) {
 });
 
 app.get('', function(req, res) {
-    res.sendfile('./public/index.html');
+    res.sendfile('public/index.html');
 });
 
-app.listen(1111);
+//both index.js and things.js should be in same directory
+//app.use('/things', things);
+
+app.listen(1111); // app.listen(port, [host], [backlog], [callback]])
 console.log("App listening on port 1111");
 
