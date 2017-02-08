@@ -12,8 +12,8 @@
     "morgan": "^1.1.1"
   },
   "scripts": {
-    "start": "node server.js",
-    "serve": "nodemon server.js"
+    "start": "node nodejs/server.js",
+    "serve": "nodemon nodejs/server.js"
   },
   "devDependencies": {},
   "repository": {

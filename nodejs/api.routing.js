@@ -3,6 +3,19 @@
  */
 var express = require('express');
 var router = express.Router();
+var mongoose = require('mongoose');
+
+var CountrySchema = new mongoose.Schema({
+    id: Number,
+    name: String
+});
+var Country = mongoose.model('Country', CountrySchema);
+
+var CitySchema = new mongoose.Schema({
+    id: Number,
+    name: String
+});
+var City = mongoose.model('City', CitySchema);
 
 router.post('/api/countries', function(req, res) {
     Country.find({}, function(err, countries) {

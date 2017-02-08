@@ -9,7 +9,7 @@
             httpService.send(constants.api.base + constants.api.country, params).then(function (data) {
                 if (!data.HasError) {
                     $scope.countries = data;
-                    console.log("countries==", data);
+                    //console.log("countries==", data);
                 }
                 else {
                     console.log("error==", data);
@@ -25,7 +25,7 @@
             httpService.send(constants.api.base + constants.api.city, params).then(function (data) {
                 if (!data.HasError) {
                     $scope.cities = data;
-                    console.log("cities==", data);
+                    //console.log("cities==", data);
                 }
                 else {
                     console.log("error==", data.Errors);
