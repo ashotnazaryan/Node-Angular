@@ -8,7 +8,7 @@ var mongoose = require('mongoose');                     // mongoose for mongodb
 var morgan = require('morgan');             // log requests to the console (express4)
 var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
-//var things = require('./things.js');
+var apiRouting = require('./api.routing.js');
 
 mongoose.connect('mongodb://localhost:27017/test');     // connect to mongoDB database on modulus.io
 
@@ -21,41 +21,41 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse applica
 app.use(methodOverride());
 
 
-var CountrySchema = new mongoose.Schema({
-    id: Number,
-    name: String
-});
-var Country = mongoose.model('Country', CountrySchema);
-
-var CitySchema = new mongoose.Schema({
-    id: Number,
-    name: String
-});
-var City = mongoose.model('City', CitySchema);
-
-app.post('/api/countries', function(req, res) {
-    Country.find({}, function(err, countries) {
-        if (err)
-            res.send(err);
-        res.json(countries);
-    });
-});
-
-app.post('/api/cities', function(req, res) {
-    var parentcode = req.body.parentcode;
-    City.find({'parentcode': parentcode}, function(err, cities) {
-        if (err)
-            res.send(err);
-        res.json(cities);
-    });
-});
+//var CountrySchema = new mongoose.Schema({
+//    id: Number,
+//    name: String
+//});
+//var Country = mongoose.model('Country', CountrySchema);
+//
+//var CitySchema = new mongoose.Schema({
+//    id: Number,
+//    name: String
+//});
+//var City = mongoose.model('City', CitySchema);
+//
+//app.post('/api/countries', function(req, res) {
+//    Country.find({}, function(err, countries) {
+//        if (err)
+//            res.send(err);
+//        res.json(countries);
+//    });
+//});
+//
+//app.post('/api/cities', function(req, res) {
+//    var parentcode = req.body.parentcode;
+//    City.find({'parentcode': parentcode}, function(err, cities) {
+//        if (err)
+//            res.send(err);
+//        res.json(cities);
+//    });
+//});
 
 app.get('', function(req, res) {
     res.sendFile('public/index.html' );
 });
 
 //both index.js and things.js should be in same directory
-//app.use('/things', things);
+app.use('/api', apiRouting);
 
 app.listen(1111); // app.listen(port, [host], [backlog], [callback]])
 console.log("App listening on port 1111");

@@ -17,7 +17,7 @@ var CitySchema = new mongoose.Schema({
 });
 var City = mongoose.model('City', CitySchema);
 
-router.post('/api/countries', function(req, res) {
+router.post('/countries', function(req, res) {
     Country.find({}, function(err, countries) {
         if (err)
             res.send(err);
@@ -25,7 +25,7 @@ router.post('/api/countries', function(req, res) {
     });
 });
 
-router.post('/api/cities', function(req, res) {
+router.post('/cities', function(req, res) {
     var parentcode = req.body.parentcode;
     City.find({'parentcode': parentcode}, function(err, cities) {
         if (err)
