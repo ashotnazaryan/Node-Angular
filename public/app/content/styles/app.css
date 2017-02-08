@@ -45,7 +45,8 @@ body {
     margin-right: 20px;
 }
 .main .block .count {
-    clear: left;
+    font-size: 25px;
+    display: inline-block;
     font-size: 25px;
 }
 .label-main {
@@ -82,7 +83,9 @@ body {
 }
 
 #map {
-    height: 600px;
-    width: 600px;
-    margin: 0 auto;
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }

@@ -13,7 +13,6 @@ var apiRouting = require('./api.routing.js');
 mongoose.connect('mongodb://localhost:27017/test');     // connect to mongoDB database on modulus.io
 
 app.use(express.static('public'));                // set the static files location /public_old/img will be /img for users
-
 app.use(morgan('dev'));                                         // log every request to the console
 app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
 app.use(bodyParser.json());                                     // parse application/json
@@ -57,6 +56,6 @@ app.get('', function(req, res) {
 //both index.js and things.js should be in same directory
 app.use('/api', apiRouting);
 
-app.listen(1111); // app.listen(port, [host], [backlog], [callback]])
+app.listen(1111); // app.listen(port, [host], [backlog], [callback]]);
 console.log("App listening on port 1111");
 
