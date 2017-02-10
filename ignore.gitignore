@@ -1,0 +1,2 @@
+# Ignore some files and directories from the custom directory.
+/node_modules
