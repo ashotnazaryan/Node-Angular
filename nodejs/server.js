@@ -2,6 +2,9 @@
  * Created by a.nazaryan on 9/27/2016.
  */
 
+//C:\Program Files\MongoDB\Server\3.4\bin>mongod
+//npm run serve
+
 var express  = require('express');
 var app = express();                               // create our public w/ express
 var mongoose = require('mongoose');                     // mongoose for mongodb
