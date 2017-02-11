@@ -5,6 +5,9 @@
     var app = angular.module("app", [
         "ui.router",
         "ngStorage",
+        //"ngMaterial",
+        //"ngAnimate",
+        //"ngAria",
         "services"
     ]);
 

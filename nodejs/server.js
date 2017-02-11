@@ -4,6 +4,7 @@
 
 //C:\Program Files\MongoDB\Server\3.4\bin>mongod
 //npm run serve
+//npm install --save-dev gulp   save to dependencies
 
 var express  = require('express');
 var app = express();                               // create our public w/ express
